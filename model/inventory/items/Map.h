@@ -4,7 +4,7 @@
 class Map : public Item
 {
 public:
-	Map() : Item("Map") {}
+	explicit Map(const std::string& name) : Item(name) {}
 
 	void Use() override;
 };

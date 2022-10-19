@@ -7,8 +7,10 @@ private:
 	int _attack;
 
 public:
-	StrengthPotion(int attack) : Potion("Strength Potion"), _attack(attack) {}
+	explicit StrengthPotion(const int attack) : Potion("Strength Potion"), _attack(attack) {}
 
 	void Use() override;
+
+	explicit operator std::string() override;
 };
 

@@ -3,10 +3,13 @@
 
 #include <vector>
 
+#include "items/Weapon.h"
+
 class Backpack
 {
 private:
 	std::vector<Item*> _items;
+	Weapon* _equipedWeapon;
 
 public:
 	Backpack();
@@ -16,6 +19,12 @@ public:
 
 	void UseHealthPotion();
 	void UseStrengthPotion();
+
+	void EquipWeapon(Weapon* weapon);
+	void UnequipWeapon();
+	void UseWeapon() const;
+
+	void ShowItems() const;
 
 	template<class T>
 	T* GetItem()

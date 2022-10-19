@@ -22,6 +22,7 @@ public:
 
 	void Equip() const;
 	void Use() override;
+	explicit operator std::string() override;
 };
 
 class Sword : public Weapon

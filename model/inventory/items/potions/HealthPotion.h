@@ -10,5 +10,7 @@ public:
 	HealthPotion(int hp) : Potion("Health Potion"), _hp(hp) {}
 
 	void Use() override;
+
+	explicit operator std::string() override;
 };
 

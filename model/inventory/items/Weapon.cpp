@@ -28,3 +28,8 @@ void Weapon::Use()
 {
 	std::cout << "Inflict " << _attackDamage << " attack damage with a " << _name << std::endl;
 }
+
+Weapon::operator std::string()
+{
+	return _name + " - " + std::to_string(_attackDamage) + " damage (" + getWeaponTypeString() + ")";
+}

@@ -10,5 +10,7 @@ public:
 	explicit Item(const std::string& name);
 
 	virtual void Use() = 0;
+
+	explicit virtual operator std::string();
 };
 
